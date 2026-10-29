@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Waste Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white; text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2); padding: 50px;
+            border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            max-width: 800px; width: 90%;
+        }
+        .logo-icon { font-size: 60px; color: #2ecc71; margin-bottom: 20px; animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        h1 { font-size: 40px; font-weight: 800; margin-bottom: 10px; letter-spacing: 2px; }
+        p { font-size: 18px; color: #ecf0f1; margin-bottom: 40px; }
+        
+        .buttons { display: flex; gap: 20px; justify-content: center; }
+        .btn {
+            padding: 15px 40px; font-size: 16px; font-weight: 600;
+            border-radius: 50px; text-decoration: none; transition: 0.3s;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .btn-admin { background: #3498db; color: white; border: 2px solid #3498db; }
+        .btn-admin:hover { background: transparent; color: #3498db; box-shadow: 0 0 15px #3498db; }
+        .btn-driver { background: #e67e22; color: white; border: 2px solid #e67e22; }
+        .btn-driver:hover { background: transparent; color: #e67e22; box-shadow: 0 0 15px #e67e22; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-icon"><i class="fas fa-recycle"></i></div>
+        <h1>Smart City Waste Collection</h1>
+        <p>Select your role to proceed to the system</p>
+        <div class="buttons">
+            <a href="admin_login.html" class="btn btn-admin"><i class="fas fa-user-shield"></i> Admin Login</a>
+            <a href="driver_login.html" class="btn btn-driver"><i class="fas fa-truck"></i> Driver Login</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Ignore uploaded photos
+uploads/*
+!uploads/.gitkeep
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore compiled Java files
+route_engine/*.class

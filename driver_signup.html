@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Driver Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); }
+        .box { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); padding: 40px; border-radius: 20px; width: 380px; text-align: center; color: white; box-shadow: 0 15px 25px rgba(0,0,0,0.3); }
+        h2 { margin-bottom: 25px; font-weight: 600; }
+        .input-group { position: relative; margin-bottom: 20px; }
+        .input-group i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.7); }
+        input { width: 100%; padding: 12px 15px 12px 45px; background: rgba(255, 255, 255, 0.2); border: none; border-radius: 10px; color: white; font-size: 15px; outline: none; }
+        input::placeholder { color: rgba(255,255,255,0.6); }
+        button { width: 100%; padding: 12px; background: #e67e22; border: none; border-radius: 10px; color: white; font-size: 18px; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 10px;}
+        button:hover { background: #d35400; }
+        .links { margin-top: 20px; font-size: 14px; }
+        .links a { color: #ecf0f1; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2><i class="fas fa-user-plus"></i> Driver Signup</h2>
+        <form action="signup.php" method="POST">
+            <input type="hidden" name="role" value="driver">
+            <div class="input-group"><i class="fas fa-user"></i><input type="text" name="username" placeholder="New Username" required></div>
+            <div class="input-group"><i class="fas fa-lock"></i><input type="password" name="password" placeholder="Password" required></div>
+            <button type="submit">Create Account</button>
+        </form>
+        <div class="links">
+            <a href="driver_login.html">Already have an account? Login</a>
+        </div>
+    </div>
+</body>
+</html>
