@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Complaints</title>
+    <title>Admin - Complaints</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: sans-serif; display: flex; margin: 0; height: 100vh; background: #f4f6f9;}
         .sidebar { width: 220px; background: #1e3c72; color: white; padding: 20px; }
@@ -21,7 +22,6 @@
         <h2>Admin</h2>
         <a href="admin.php">Dashboard</a>
         <a href="complaints.php" class="active">Complaints</a>
-        <a href="settings.php">Settings</a>
         <a href="logout.php" style="margin-top: 50px; background: #e74c3c;">Logout</a>
     </div>
     <div class="main">
@@ -38,7 +38,7 @@
                 data.forEach(c => {
                     let proof = c.proof_image ? `<img src='uploads/${c.proof_image}' class='proof-img'>` : 'No Proof';
                     let action = c.status === 'UNRESOLVED' ? `<button onclick="resolve(${c.id})">Resolve</button>` : 'Done';
-                    html += `<tr><td>${c.created_at}</td><td>${c.driver_id}</td><td>${c.message}</td><td class="status-${c.status}">${c.status}</td><td>${proof}</td><td>${action}</td></tr>`;
+                    html += `<tr><td>${c.created_at}</td><td>Driver ${c.driver_id}</td><td>${c.message}</td><td class="status-${c.status}">${c.status}</td><td>${proof}</td><td>${action}</td></tr>`;
                 });
                 document.getElementById('tableBody').innerHTML = html;
             });
